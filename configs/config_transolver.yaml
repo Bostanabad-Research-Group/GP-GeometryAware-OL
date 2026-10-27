@@ -1,0 +1,21 @@
+defaults:
+  - machine: local
+  - problem: transolver/naca
+  - ablation: standard
+  - _self_
+
+workdir:
+  base_path: ${machine.base_path}/${workdir.out_dir}/${problem.name}
+  data_dir: "Data"
+  out_dir: "Out/Baselines/transolver" 
+
+settings:
+  random_seed: 1
+  dtype: "float32"  # Options: float32, double
+  device: "cuda"  # Options: cpu, cuda
+  tqdm: False
+
+hydra:
+  run:
+    dir: >-
+      ${workdir.base_path}/${ablation.subdir}

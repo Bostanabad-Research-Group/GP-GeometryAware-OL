@@ -1,0 +1,4 @@
+name: "standard"
+subdir: "ablation_${ablation.name}/N_${problem.data.N_train}/seed_${settings.random_seed}"
+preprocess_subdir_train: "ablation_${ablation.name}/Preprocess/seed_${settings.random_seed}"
+preprocess_subdir_test: "ablation_${ablation.name}/Preprocess/seed_${settings.random_seed}"
